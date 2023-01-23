@@ -29,18 +29,18 @@ function Header(){
             <div className="header-item">20 Nov 2021(Today)</div>
             <div className="header-item"></div>
             <div className="header-item right-header-item">
-                <div className="dropdown">
-                    <button className="dropbtn" id="reportbtn">{report}<img style={{width: "0.7rem",height: "0.6rem",margin:"0 0 0 0.5rem",overflow:"visible"}} src={Vector} alt="icon"/></button>
-                    <div className="dropdown-content">
+                <div className="dropdown" onMouseOver={()=>{document.getElementsByClassName('dropdown-content')[0].style='block'}}>
+                    <div className="header-item right-header-item dropbtn" id="reportbtn">{report}<img style={{width: "0.7rem",height: "0.6rem",margin:"0 0 0 0.5rem",overflow:"visible"}} src={Vector} alt="icon"/></div>
+                    <a className="dropdown-content">
                         <a onClick={()=>setreport('REPORT 1')}>Report 1</a>
                         <a onClick={()=>setreport('REPORT 2')}>Report 2</a>
                         <a onClick={()=>setreport('REPORT 3')}>Report 3</a>
-                    </div>
+                    </a>
                   </div>
             </div>
             <div className="header-item right-header-item">
                 <div className="dropdown">
-                    <button className="dropbtn">MARK INTERVIEW <img style={{width: "0.7rem",height: "0.6rem",margin:"0 0 0 0.5rem",overflow:"visible"}} src={Vector} alt="icon"/></button>
+                    <div className="header-item dropbtn">MARK INTERVIEW <img style={{width: "0.7rem",height: "0.6rem",margin:"0 0 0 0.5rem",overflow:"visible"}} src={Vector} alt="icon"/></div>
                 <div className="dropdown-content">
                 <a href="#" value="">Link 1</a>
                 <a href="#">Link 2</a>
